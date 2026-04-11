@@ -7,8 +7,8 @@ function BackgroundBlock({ children, image, className = "" }) {
       style={style}
     >
       <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(4,7,16,0.9),rgba(10,16,28,0.82))]" />
-      <div className="pointer-events-none absolute -left-16 top-6 h-48 w-48 rounded-full bg-lime-400/20 blur-3xl" />
-      <div className="pointer-events-none absolute -right-16 bottom-2 h-56 w-56 rounded-full bg-orange-400/20 blur-3xl" />
+      <div className="pointer-events-none absolute -left-16 top-6 h-48 w-48 rounded-full bg-[#7ECAC3]/25 blur-3xl" />
+      <div className="pointer-events-none absolute -right-16 bottom-2 h-56 w-56 rounded-full bg-[#FFB238]/25 blur-3xl" />
       <div className="relative z-10 flex w-full flex-col gap-4">{children}</div>
     </section>
   );
