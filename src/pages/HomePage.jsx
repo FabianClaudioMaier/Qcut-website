@@ -10,11 +10,10 @@ import H3Block from "../components/H3Block";
 import heroBackground from "../assets/images/hero-background.svg";
 import sampleImage from "../assets/images/sample-photo.svg";
 import sampleVideo from "../assets/videos/sample-video.mp4";
-import "../styles/pages/HomePage.css";
 
 function HomePage() {
   return (
-    <main className="home-page" id="top">
+    <main className="mx-auto max-w-[1100px] px-4 pb-12 pt-8" id="top">
       <BackgroundBlock image={heroBackground}>
         <H1Block>Simple React Homepage</H1Block>
         <TextBlock>
@@ -24,7 +23,7 @@ function HomePage() {
         <ButtonBlock label="Jump to Content" href="#content" />
       </BackgroundBlock>
 
-      <section className="home-page__grid" id="content">
+      <section className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2" id="content">
         <ContentBlock>
           <H2Block>Image Block</H2Block>
           <ImageBlock src={sampleImage} alt="Sample placeholder art" caption="This image comes from src/assets/images." />
@@ -35,15 +34,15 @@ function HomePage() {
           <VideoBlock src={sampleVideo} title="This video comes from src/assets/videos." />
         </ContentBlock>
 
-        <ContentBlock className="home-page__full-width">
+        <ContentBlock className="md:col-span-2">
           <H3Block>Text + Button + Generic Block</H3Block>
           <TextBlock>
             Use the content block as a flexible container, then compose it with text and buttons for layouts across
             sections.
           </TextBlock>
-          <div className="home-page__inline-row">
+          <div className="mt-4 flex flex-wrap items-center gap-3">
             <ButtonBlock label="Primary Action" href="#top" />
-            <TextBlock muted>All styles are split by component and page in the styles folder.</TextBlock>
+            <TextBlock muted>Styling now uses Tailwind CSS utility classes and a single tailwind.css entry file.</TextBlock>
           </div>
         </ContentBlock>
       </section>
