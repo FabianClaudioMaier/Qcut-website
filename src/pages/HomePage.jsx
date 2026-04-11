@@ -25,9 +25,9 @@ const proChecklist = [
 
 function HomePage() {
   return (
-    <main className="mx-auto w-full max-w-[1100px] px-4 pb-12 pt-8">
-      <BackgroundBlock className="flex flex-col gap-8 md:gap-10">
-        <ContentBlock className="mx-auto w-full max-w-3xl text-center">
+    <main className="mx-auto w-full max-w-[1100px] px-4 pb-12 pt-8 flex flex-col gap-8 md:gap-10">
+      
+        <ContentBlock className="mx-auto w-full text-center">
           <H1Block>Qcut</H1Block>
           <H2Block>The new way off multicam set cutting</H2Block>
           <TextBlock>
@@ -69,7 +69,7 @@ function HomePage() {
           </div>
         </section>
 
-        <section className="mx-auto w-full max-w-3xl">
+        <section className="mx-auto w-full">
           <ContentBlock className="text-center">
             <H2Block>Any troubles with your License?</H2Block>
             <div className="mt-5">
@@ -77,7 +77,7 @@ function HomePage() {
             </div>
           </ContentBlock>
         </section>
-      </BackgroundBlock>
+      
     </main>
   );
 }
