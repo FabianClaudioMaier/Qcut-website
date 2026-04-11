@@ -17,8 +17,15 @@
   body {
     margin: 0;
     min-width: 320px;
-    color: #0e1e2f;
-    background: radial-gradient(circle at 20% 0%, #fefefe, #edf2f8 40%, #dde8f3 100%);
+    color: #e7ecf3;
+    background:
+      radial-gradient(circle at 15% -10%, rgba(132, 204, 22, 0.18), transparent 36%),
+      radial-gradient(circle at 95% 0%, rgba(251, 146, 60, 0.2), transparent 42%),
+      linear-gradient(160deg, #060911 0%, #0b1220 48%, #111827 100%);
+  }
+
+  #root {
+    min-height: 100vh;
   }
 
   a {

@@ -13,17 +13,22 @@ import sampleVideo from "../assets/videos/sample-video.mp4";
 
 function HomePage() {
   return (
-    <main className="mx-auto w-full flex items-center justify-center" id="top">
-      <BackgroundBlock image={heroBackground}>
-        <H1Block>Simple React Homepage</H1Block>
-        <TextBlock>
-          This page wires together reusable building blocks for background, headings, text, images, videos, blocks,
-          and buttons.
-        </TextBlock>
-        <ButtonBlock label="Jump to Content" href="#content" />
-      
+    <main className="mx-auto w-full max-w-[1100px] px-4 pb-12 pt-8" id="top">
+      <BackgroundBlock
+        image={heroBackground}
+        className="flex min-h-[420px] items-center justify-center text-center shadow-[0_0_40px_rgba(251,146,60,0.12)]"
+      >
+        <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-4">
+          <H1Block>Simple React Homepage</H1Block>
+          <TextBlock>
+            This page wires together reusable building blocks for background, headings, text, images, videos, blocks,
+            and buttons.
+          </TextBlock>
+          <ButtonBlock label="Jump to Content" href="#content" />
+        </div>
+      </BackgroundBlock>
 
-      <section className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2" id="content">
+      <section className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2" id="content">
         <ContentBlock>
           <H2Block>Image Block</H2Block>
           <ImageBlock src={sampleImage} alt="Sample placeholder art" caption="This image comes from src/assets/images." />
@@ -42,11 +47,10 @@ function HomePage() {
           </TextBlock>
           <div className="mt-4 flex flex-wrap items-center gap-3">
             <ButtonBlock label="Primary Action" href="#top" />
-            <TextBlock muted>Styling now uses Tailwind CSS utility classes and a single tailwind.css entry file.</TextBlock>
+            <TextBlock muted>Dark mode is active with lime-green and orange signal colors.</TextBlock>
           </div>
         </ContentBlock>
       </section>
-      </BackgroundBlock>
     </main>
   );
 }
