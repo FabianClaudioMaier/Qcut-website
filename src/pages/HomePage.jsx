@@ -13,7 +13,7 @@ import sampleVideo from "../assets/videos/sample-video.mp4";
 
 function HomePage() {
   return (
-    <main className="mx-auto max-w-[1100px] px-4 pb-12 pt-8" id="top">
+    <main className="mx-auto w-full flex items-center justify-center" id="top">
       <BackgroundBlock image={heroBackground}>
         <H1Block>Simple React Homepage</H1Block>
         <TextBlock>
@@ -21,7 +21,7 @@ function HomePage() {
           and buttons.
         </TextBlock>
         <ButtonBlock label="Jump to Content" href="#content" />
-      </BackgroundBlock>
+      
 
       <section className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2" id="content">
         <ContentBlock>
@@ -46,6 +46,7 @@ function HomePage() {
           </div>
         </ContentBlock>
       </section>
+      </BackgroundBlock>
     </main>
   );
 }
