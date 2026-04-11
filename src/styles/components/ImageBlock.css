@@ -1,0 +1,16 @@
+.image-block {
+  margin: 0;
+}
+
+.image-block__media {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  border: 1px solid #c7d5e4;
+}
+
+.image-block__caption {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: #425b74;
+}

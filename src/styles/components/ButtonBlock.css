@@ -1,0 +1,16 @@
+.button-block {
+  display: inline-block;
+  border: 1px solid #1a8f9f;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #20a7b9, #147686);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.7rem 1.1rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.button-block:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(13, 94, 107, 0.3);
+}
