@@ -6,6 +6,7 @@ import DownloadsPage from "./pages/DownloadsPage";
 import HelpPage from "./pages/HelpPage";
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
+import DownloadsPage2 from "./pages/DownloadsPage2";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/impressum" element={<ImpressumPage />} />
             <Route path="/privacy-notice" element={<PrivacyNoticePage />} />
             <Route path="/downloads" element={<DownloadsPage />} />
+            <Route path="/downloads2" element={<DownloadsPage2 />} />
             <Route path="/help" element={<HelpPage />} />
             <Route path="*" element={<Navigate replace to="/" />} />
           </Routes>

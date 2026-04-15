@@ -23,6 +23,14 @@ const proChecklist = [
   "Weekly feature updates"
 ];
 
+const djChecklist = [
+  "something something",
+  "and other stuff",
+  "that one we got too",
+  "Crazy right?",
+  "das crazy!"
+];
+
 function HomePage() {
   return (
     <main className="mx-auto w-full max-w-[1100px] px-4 pb-12 pt-8 flex flex-col gap-8 md:gap-10">
@@ -44,7 +52,7 @@ function HomePage() {
             <H2Block>Get Your License Here</H2Block>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             <ContentBlock className="flex flex-col gap-4">
               <H3Block>Comunity Version</H3Block>
               <div className="space-y-2">
@@ -52,8 +60,8 @@ function HomePage() {
                   <TextBlock key={item}>[x] {item}</TextBlock>
                 ))}
               </div>
-              <ButtonBlock className="w-full" label="Subscription 5€/month" href="https://www.example.com" />
-              <ButtonBlock className="w-full" label="One time purchase 75€" href="https://www.example.com" />
+              <ButtonBlock className="w-full" label="Subscription 25€/month" href="https://www.example.com" />
+              <ButtonBlock className="w-full" label="One time purchase 250€" href="https://www.example.com" />
             </ContentBlock>
 
             <ContentBlock className="flex flex-col gap-4">
@@ -63,8 +71,18 @@ function HomePage() {
                   <TextBlock key={item}>[x] {item}</TextBlock>
                 ))}
               </div>
+              <ButtonBlock className="w-full" label="Subscription 50€/month" href="https://www.example.com" />
+              <ButtonBlock className="w-full" label="One time purchase 800€" href="https://www.example.com" />
+            </ContentBlock>
+
+            <ContentBlock className="flex flex-col gap-4">
+              <H3Block>DJ Version</H3Block>
+              <div className="space-y-2">
+                {communityChecklist.map((item) => (
+                  <TextBlock key={item}>[x] {item}</TextBlock>
+                ))}
+              </div>
               <ButtonBlock className="w-full" label="Subscription 20€/month" href="https://www.example.com" />
-              <ButtonBlock className="w-full" label="One time purchase 200€" href="https://www.example.com" />
             </ContentBlock>
           </div>
         </section>

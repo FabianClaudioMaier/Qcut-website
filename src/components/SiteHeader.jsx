@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 
 const navItems = [
   { to: "/", label: "Home" },
-  { to: "/downloads", label: "Downloads" },
   { to: "/help", label: "Help" }
 ];
 
