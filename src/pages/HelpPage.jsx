@@ -22,7 +22,7 @@ function HelpPage() {
               Email
             </label>
             <input
-              className="w-full rounded-full border border-[#7ECAC3]/50 bg-slate-950/70 px-4 py-2.5 text-slate-100 placeholder:text-slate-500 focus:border-[#7ECAC3] focus:outline-none focus:ring-2 focus:ring-[#7ECAC3]/30"
+              className="w-full rounded-full border border-[#7ECAC3]/50 bg-black px-4 py-2.5 text-slate-100 placeholder:text-slate-500 focus:border-[#7ECAC3] focus:outline-none focus:ring-2 focus:ring-[#7ECAC3]/30"
               id="subscription-email"
               placeholder="you@example.com"
               type="email"

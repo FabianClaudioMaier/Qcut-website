@@ -7,7 +7,7 @@ const navItems = [
 
 function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-800/80 bg-slate-950/85 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-slate-800/80 bg-[#212121] backdrop-blur">
       <div className="mx-auto flex w-full max-w-[1100px] items-center justify-between px-4 py-3">
         <NavLink className="text-lg font-bold tracking-wide text-slate-50" to="/">
           QCUT
