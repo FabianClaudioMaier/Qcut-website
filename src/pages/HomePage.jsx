@@ -27,7 +27,7 @@ const djChecklist = [
 
 function HomePage() {
   return (
-    <main className="mx-auto w-full max-w-[1100px] px-4 pb-12  flex flex-col gap-8 md:gap-10">
+    <main className="mx-auto w-full max-w-[1100px] px-4 pb-12 flex flex-col gap-8 md:gap-10">
           <div className="relative left-1/2 w-screen -translate-x-1/2">
             <VideoBlock
               autoPlay
