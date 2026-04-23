@@ -50,7 +50,8 @@ function EditorVersionPage() {
                 <TextBlock key={item}>[x] {item}</TextBlock>
               ))}
             </div>
-            <ButtonBlock className="w-full" label="One time purchase 250€" href="https://www.example.com" />
+            <ButtonBlock className="w-full sm:w-auto" href="https://www.example.com" label="Subscription 30€/month" />
+            <ButtonBlock className="w-full" label="One time purchase 400€" href="https://www.example.com" />
           </ContentBlock>
 
           <ContentBlock className="flex flex-col gap-4">
@@ -60,6 +61,7 @@ function EditorVersionPage() {
                 <TextBlock key={item}>[x] {item}</TextBlock>
               ))}
             </div>
+            <ButtonBlock className="w-full sm:w-auto" href="https://www.example.com" label="Subscription 50€/month" />
             <ButtonBlock className="w-full" label="One time purchase 800€" href="https://www.example.com" />
           </ContentBlock>
         </div>

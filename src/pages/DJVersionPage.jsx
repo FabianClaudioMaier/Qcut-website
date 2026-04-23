@@ -23,8 +23,7 @@ function DJVersionPage() {
         <ContentBlock className="text-center">
           <H2Block>Get Your License Key</H2Block>
           <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:justify-center">
-            <ButtonBlock className="w-full sm:w-auto" href="https://www.example.com" label="Subscription 25€/month" />
-            <ButtonBlock className="w-full sm:w-auto" href="https://www.example.com" label="Subscription 50€/month" />
+            <ButtonBlock className="w-full sm:w-auto" href="https://www.example.com" label="Subscription 20€/month" />
           </div>
         </ContentBlock>
       </section>
