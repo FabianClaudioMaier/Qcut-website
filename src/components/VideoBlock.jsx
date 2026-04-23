@@ -1,7 +1,31 @@
-function VideoBlock({ src, poster, title, type = "video/mp4" }) {
+function VideoBlock({
+  src,
+  poster,
+  title,
+  type = "video/mp4",
+  className = "",
+  videoClassName = "",
+  autoPlay = false,
+  loop = false,
+  muted = false,
+  playsInline = false,
+  showControls = true
+}) {
+  const figureClasses = `m-0 ${className}`.trim();
+  const videoClasses = `w-full rounded-xl border border-slate-700 bg-black ${videoClassName}`.trim();
+
   return (
-    <figure className="m-0">
-      <video className="w-full rounded-xl border border-slate-700 bg-black" controls preload="metadata" poster={poster}>
+    <figure className={figureClasses}>
+      <video
+        autoPlay={autoPlay}
+        className={videoClasses}
+        controls={showControls}
+        loop={loop}
+        muted={muted}
+        playsInline={playsInline}
+        poster={poster}
+        preload="metadata"
+      >
         <source src={src} type={type} />
         Your browser does not support the video tag.
       </video>

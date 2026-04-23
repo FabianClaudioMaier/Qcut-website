@@ -2,10 +2,12 @@ import BackgroundBlock from "../components/BackgroundBlock";
 import ContentBlock from "../components/ContentBlock";
 import ButtonBlock from "../components/ButtonBlock";
 import TextBlock from "../components/TextBlock";
+import VideoBlock from "../components/VideoBlock";
 import H1Block from "../components/H1Block";
 import H2Block from "../components/H2Block";
 import H3Block from "../components/H3Block";
 import heroBackground from "../assets/images/hero-background.svg";
+import sampleVideo from "../assets/videos/sample-video.mp4";
 
 const communityChecklist = [
   "1 project workspace",
@@ -13,14 +15,6 @@ const communityChecklist = [
   "Standard export presets",
   "Email support within 72 hours",
   "Updates every quarter"
-];
-
-const proChecklist = [
-  "Unlimited project workspaces",
-  "Advanced multicam automation",
-  "Priority render queue",
-  "Live chat support",
-  "Weekly feature updates"
 ];
 
 const djChecklist = [
@@ -33,18 +27,22 @@ const djChecklist = [
 
 function HomePage() {
   return (
-    <main className="mx-auto w-full max-w-[1100px] px-4 pb-12 pt-8 flex flex-col gap-8 md:gap-10">
-      
+    <main className="mx-auto w-full max-w-[1100px] px-4 pb-12  flex flex-col gap-8 md:gap-10">
+          <div className="relative left-1/2 w-screen -translate-x-1/2">
+            <VideoBlock
+              autoPlay
+              loop
+              muted
+              playsInline
+              showControls={false}
+              src={sampleVideo}
+              videoClassName="h-[75vh] rounded-none border-x-0 object-cover"
+            />
+          </div>
+
         <ContentBlock className="mx-auto w-full text-center">
           <H1Block>Qcut</H1Block>
           <H2Block>The new way off multicam set cutting</H2Block>
-          <TextBlock>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.
-          </TextBlock>
-          <div className="mt-5">
-            <ButtonBlock label="Download now!" to="/downloads" />
-          </div>
         </ContentBlock>
 
         <section className="mx-auto w-full max-w-5xl">
@@ -52,37 +50,25 @@ function HomePage() {
             <H2Block>Get Your License Here</H2Block>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-            <ContentBlock className="flex flex-col gap-4">
-              <H3Block>Comunity Version</H3Block>
-              <div className="space-y-2">
-                {communityChecklist.map((item) => (
-                  <TextBlock key={item}>[x] {item}</TextBlock>
-                ))}
-              </div>
-              <ButtonBlock className="w-full" label="Subscription 25€/month" href="https://www.example.com" />
-              <ButtonBlock className="w-full" label="One time purchase 250€" href="https://www.example.com" />
-            </ContentBlock>
-
-            <ContentBlock className="flex flex-col gap-4">
-              <H3Block>Pro Version</H3Block>
-              <div className="space-y-2">
-                {proChecklist.map((item) => (
-                  <TextBlock key={item}>[x] {item}</TextBlock>
-                ))}
-              </div>
-              <ButtonBlock className="w-full" label="Subscription 50€/month" href="https://www.example.com" />
-              <ButtonBlock className="w-full" label="One time purchase 800€" href="https://www.example.com" />
-            </ContentBlock>
-
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <ContentBlock className="flex flex-col gap-4">
               <H3Block>DJ Version</H3Block>
               <div className="space-y-2">
+                {djChecklist.map((item) => (
+                  <TextBlock key={item}>[x] {item}</TextBlock>
+                ))}
+              </div>
+              <ButtonBlock className="w-full" label="Get the DJ-Version" to="/dj-version" />
+            </ContentBlock>
+
+            <ContentBlock className="flex flex-col gap-4">
+              <H3Block>Editor Version</H3Block>
+              <div className="space-y-2">
                 {communityChecklist.map((item) => (
                   <TextBlock key={item}>[x] {item}</TextBlock>
                 ))}
               </div>
-              <ButtonBlock className="w-full" label="Subscription 20€/month" href="https://www.example.com" />
+              <ButtonBlock className="w-full" label="Get the Editor-Version" to="/editor-version" />
             </ContentBlock>
           </div>
         </section>
