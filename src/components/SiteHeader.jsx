@@ -1,40 +1,94 @@
-import { NavLink } from "react-router-dom";
-
-const navItems = [
-  { to: "/", label: "Home" },
-  { to: "/dj-version", label: "DJ Version" },
-  { to: "/editor-version", label: "Editor Version" },
-  { to: "/help", label: "Help" }
-];
+import { NavLink, Link } from "react-router-dom";
+import { useState } from "react";
+import Toast from "./Toast";
+import { useToast } from "../hooks/useToast";
 
 function SiteHeader() {
-  return (
-    <header className="sticky top-0 z-40 border-b border-slate-800/80 bg-[#212121] backdrop-blur">
-      <div className="mx-auto flex w-full max-w-[1100px] items-center justify-between px-4 py-3">
-        <NavLink className="text-lg font-bold tracking-wide text-slate-50" to="/">
-          QCUT
-        </NavLink>
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { isVisible, message, showToast, hideToast } = useToast();
+  
+  const handleComingSoon = () => {
+    showToast("Coming soon — we're working on it! 🚧");
+  };
 
-        <nav className="flex items-center gap-2">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.to}
-              className={({ isActive }) =>
-                [
-                  "rounded-full px-3 py-1.5 text-sm font-medium transition",
-                  isActive
-                    ? "bg-[#7ECAC3]/20 text-[#7ECAC3]"
-                    : "text-slate-300 hover:bg-slate-800 hover:text-[#FFB238]"
-                ].join(" ")
-              }
-              to={item.to}
+  return (
+    <>
+      <nav className="nav">
+        <div className="nav-inner">
+          <Link to="/" className="brand">
+            <span className="brand-mark"></span>
+            <span>Q·CUT</span>
+          </Link>
+
+          <div className="nav-links">
+            <NavLink 
+              to="/" 
+              className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+              end
             >
-              {item.label}
+              Home
             </NavLink>
-          ))}
-        </nav>
+            <NavLink 
+              to="/pricing" 
+              className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+            >
+              Pricing
+            </NavLink>
+            <NavLink 
+              to="/help" 
+              className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+            >
+              Help
+            </NavLink>
+            <button onClick={handleComingSoon} className="btn btn-amber">
+              Get Q·Cut
+            </button>
+          </div>
+
+          <button 
+            className={`hamburger ${mobileMenuOpen ? "open" : ""}`}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+
+      <div className={`mobile-nav ${mobileMenuOpen ? "open" : ""}`}>
+        <NavLink 
+          to="/" 
+          className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+          onClick={() => setMobileMenuOpen(false)}
+          end
+        >
+          Home
+        </NavLink>
+        <NavLink 
+          to="/pricing" 
+          className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          Pricing
+        </NavLink>
+        <NavLink 
+          to="/help" 
+          className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          Help
+        </NavLink>
+        <button 
+          className="btn btn-amber w-full"
+          onClick={() => { setMobileMenuOpen(false); handleComingSoon(); }}
+        >
+          Get Q·Cut
+        </button>
       </div>
-    </header>
+      <Toast message={message} isVisible={isVisible} onClose={hideToast} />
+    </>
   );
 }
 

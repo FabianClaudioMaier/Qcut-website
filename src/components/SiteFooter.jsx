@@ -2,16 +2,34 @@ import { Link } from "react-router-dom";
 
 function SiteFooter() {
   return (
-    <footer className="border-t border-slate-800/80 bg-[#212121]">
-      <div className="mx-auto flex w-full max-w-[1100px] flex-col gap-3 px-4 py-6 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
-        <p className="m-0">Qcut. Built for fast multicam workflows.</p>
-        <div className="flex items-center gap-4">
-          <Link className="transition hover:text-[#7ECAC3]" to="/impressum">
-            Impressum
-          </Link>
-          <Link className="transition hover:text-[#FFB238]" to="/privacy-notice">
-            Privacy Notice
-          </Link>
+    <footer style={{borderTop: "1px solid var(--line)", background: "var(--surface)"}}>
+      <div className="container" style={{padding: "32px"}}>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-3">
+            <span className="brand-mark"></span>
+            <span className="t-label">© 2024 Q·Cut. Built for fast multicam workflows.</span>
+          </div>
+          <div className="flex items-center gap-6">
+            <Link className="t-label" style={{transition: "color .2s ease"}} 
+                  to="/impressum"
+                  onMouseEnter={(e) => e.target.style.color = "var(--text)"}
+                  onMouseLeave={(e) => e.target.style.color = ""}>
+              Impressum
+            </Link>
+            <Link className="t-label" style={{transition: "color .2s ease"}}
+                  to="/privacy-notice"
+                  onMouseEnter={(e) => e.target.style.color = "var(--text)"}
+                  onMouseLeave={(e) => e.target.style.color = ""}>
+              Privacy
+            </Link>
+            <a href="mailto:support@qcut.app" 
+               className="t-label" 
+               style={{transition: "color .2s ease"}}
+               onMouseEnter={(e) => e.target.style.color = "var(--amber)"}
+               onMouseLeave={(e) => e.target.style.color = ""}>
+              Contact
+            </a>
+          </div>
         </div>
       </div>
     </footer>

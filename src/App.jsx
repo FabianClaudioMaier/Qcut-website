@@ -5,6 +5,7 @@ import PrivacyNoticePage from "./pages/PrivacyNoticePage";
 import HelpPage from "./pages/HelpPage";
 import DJVersionPage from "./pages/DJVersionPage";
 import EditorVersionPage from "./pages/EditorVersionPage";
+import PricingPage from "./pages/PricingPage";
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
 import SuccessPage from "./pages/SuccessPage";
@@ -17,6 +18,7 @@ function App() {
         <div className="flex-1">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/pricing" element={<PricingPage />} />
             <Route path="/impressum" element={<ImpressumPage />} />
             <Route path="/privacy-notice" element={<PrivacyNoticePage />} />
             <Route path="/help" element={<HelpPage />} />
