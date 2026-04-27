@@ -7,6 +7,7 @@ import DJVersionPage from "./pages/DJVersionPage";
 import EditorVersionPage from "./pages/EditorVersionPage";
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
+import SuccessPage from "./pages/SuccessPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/help" element={<HelpPage />} />
             <Route path="/dj-version" element={<DJVersionPage />} />
             <Route path="/editor-version" element={<EditorVersionPage />} />
+            <Route path="/success" element={<SuccessPage />} />
             <Route path="*" element={<Navigate replace to="/" />} />
           </Routes>
         </div>

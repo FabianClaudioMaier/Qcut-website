@@ -1,3 +1,4 @@
+import { redirectToCheckout } from "../utils/checkout";
 import ButtonBlock from "../components/ButtonBlock";
 import ContentBlock from "../components/ContentBlock";
 import H1Block from "../components/H1Block";
@@ -6,6 +7,13 @@ import H3Block from "../components/H3Block";
 import TextBlock from "../components/TextBlock";
 import VideoBlock from "../components/VideoBlock";
 import sampleVideo from "../assets/videos/sample-video.mp4";
+
+const PRICES = {
+  creatorMonth: 'price_1TQVNtBSfJ4A9uVJmtEhAaR3',
+  creatorLifetime: 'price_1TQVNtBSfJ4A9uVJhclSWGnr',
+  studioMonth: 'price_1TQVSjBSfJ4A9uVJkyzTq6JV',
+  studioLifetime: 'price_1TQVSjBSfJ4A9uVJHMHgrTxr',
+};
 
 const communityChecklist = [
   "1 project workspace",
@@ -31,8 +39,7 @@ function EditorVersionPage() {
           <H1Block>Editor Version</H1Block>
           <H2Block>Your Performance. Cut in Real Time.</H2Block>
           <TextBlock>
-            Built for editors who need fast multicam edits from live sets, aftermovies, and social-ready highlight
-            clips.
+            Built for editors who need fast multicam edits from live sets, aftermovies, and social-ready highlight clips.
           </TextBlock>
         </ContentBlock>
       </section>
@@ -50,8 +57,16 @@ function EditorVersionPage() {
                 <TextBlock key={item}>[x] {item}</TextBlock>
               ))}
             </div>
-            <ButtonBlock className="w-full sm:w-auto" href="https://www.example.com" label="Subscription 30€/month" />
-            <ButtonBlock className="w-full" label="One time purchase 400€" href="https://www.example.com" />
+            <ButtonBlock
+              className="w-full sm:w-auto"
+              label="Subscription 30€/month"
+              onClick={() => redirectToCheckout(PRICES.creatorMonth)}
+            />
+            <ButtonBlock
+              className="w-full"
+              label="One time purchase 400€"
+              onClick={() => redirectToCheckout(PRICES.creatorLifetime)}
+            />
           </ContentBlock>
 
           <ContentBlock className="flex flex-col gap-4">
@@ -61,8 +76,16 @@ function EditorVersionPage() {
                 <TextBlock key={item}>[x] {item}</TextBlock>
               ))}
             </div>
-            <ButtonBlock className="w-full sm:w-auto" href="https://www.example.com" label="Subscription 50€/month" />
-            <ButtonBlock className="w-full" label="One time purchase 800€" href="https://www.example.com" />
+            <ButtonBlock
+              className="w-full sm:w-auto"
+              label="Subscription 50€/month"
+              onClick={() => redirectToCheckout(PRICES.studioMonth)}
+            />
+            <ButtonBlock
+              className="w-full"
+              label="One time purchase 800€"
+              onClick={() => redirectToCheckout(PRICES.studioLifetime)}
+            />
           </ContentBlock>
         </div>
       </section>

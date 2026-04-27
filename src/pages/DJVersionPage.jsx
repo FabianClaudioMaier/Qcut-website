@@ -1,3 +1,4 @@
+import { redirectToCheckout } from "../utils/checkout";
 import ButtonBlock from "../components/ButtonBlock";
 import ContentBlock from "../components/ContentBlock";
 import H1Block from "../components/H1Block";
@@ -6,7 +7,13 @@ import TextBlock from "../components/TextBlock";
 import VideoBlock from "../components/VideoBlock";
 import sampleVideo from "../assets/videos/sample-video.mp4";
 
+const DJ_MONTH_PRICE_ID = 'price_1TQVJyBSfJ4A9uVJTrQzprla';
+
 function DJVersionPage() {
+  const handleSubscribe = async () => {
+    await redirectToCheckout(DJ_MONTH_PRICE_ID);
+  };
+
   return (
     <main className="mx-auto flex w-full max-w-[1100px] flex-col gap-8 px-4 pb-12 pt-8 md:gap-10">
       <section className="mx-auto w-full">
@@ -23,7 +30,11 @@ function DJVersionPage() {
         <ContentBlock className="text-center">
           <H2Block>Get Your License Key</H2Block>
           <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:justify-center">
-            <ButtonBlock className="w-full sm:w-auto" href="https://www.example.com" label="Subscription 20€/month" />
+            <ButtonBlock
+              className="w-full sm:w-auto"
+              label="Subscription 20€/month"
+              onClick={handleSubscribe}
+            />
           </div>
         </ContentBlock>
       </section>
