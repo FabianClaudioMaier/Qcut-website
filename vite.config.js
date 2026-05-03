@@ -5,6 +5,6 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   preview: {
-    allowedHosts: ["qcut-website-production.up.railway.app"]
+    allowedHosts: ['www.qcut.at', 'qcut.at']
   }
 });
