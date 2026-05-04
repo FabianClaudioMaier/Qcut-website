@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import BeatGrid from "../components/BeatGrid";
+import YouTubeEmbed from "../components/YouTubeEmbed";
 
 function HomePage() {
   return (
@@ -32,7 +33,7 @@ function HomePage() {
         <div className="container">
           <h2 className="t-h2 text-center mb-8">As simple as 1-2-3</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="card card-feature text-center">
               <div className="text-4xl mb-4" style={{color: "var(--amber)"}}>01</div>
               <h3 className="t-h3 mb-3">Import your footage</h3>
@@ -57,6 +58,12 @@ function HomePage() {
               </p>
             </div>
           </div>
+          <YouTubeEmbed
+              url="https://youtu.be/Bzbe1ti2tC8?si=YIaqQ5V420zYtW6B"
+              showControls={true}
+              autoPlay={false}
+              title="Tutorial Video"
+          />
         </div>
       </section>
 

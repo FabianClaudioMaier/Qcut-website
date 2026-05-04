@@ -39,3 +39,10 @@ The project is structured to enforce a strict design system and code reusability
 
 ### Routing
 The application is wrapped in a unified layout containing a `SiteHeader` and `SiteFooter`. Page content is dynamically rendered between them using React Router in `App.jsx`.
+
+## YouTubeEmbed
+`YouTubeEmbed` renders a responsive YouTube iframe from a `youtu.be` URL and supports `showControls` and `autoPlay` toggles.
+
+```jsx
+<YouTubeEmbed url="https://youtu.be/VIDEO_ID" showControls={true} autoPlay={false} />
+```
