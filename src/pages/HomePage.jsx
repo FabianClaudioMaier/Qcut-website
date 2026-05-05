@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import YouTubeEmbed from '../components/YouTubeEmbed';
+import Reveal from '../components/Reveal';
 
 function HomePage() {
   return (
@@ -42,7 +43,7 @@ function HomePage() {
       </div>
 
       {/* Tutorial Video Section */}
-      <section className="container section">
+      <Reveal as="section" className="container section">
         <div style={{textAlign: 'center', marginBottom: 32}}>
           <h2 className="t-h2">See how it performs</h2>
           {/*<p className="t-body-lg" style={{maxWidth: 640, margin: '20px auto 0'}}>*/}
@@ -57,39 +58,45 @@ function HomePage() {
             title="Q·Cut DJ Tutorial"
           />
         </div>
-      </section>
+      </Reveal>
 
       {/* Two Tools Section */}
       <section className="container section">
-        <div style={{textAlign: 'center', marginBottom: 32}}>
-          <h2 className="t-h2">
-            Two tools<br/>
-          </h2>
-          <p className="t-body-lg" style={{maxWidth: 640, margin: '20px auto 0', color: 'var(--text-2)'}}>
-            Choose betweean easy clips and full control
-          </p>
-        </div>
+        <Reveal>
+          <div style={{textAlign: 'center', marginBottom: 32}}>
+            <h2 className="t-h2">
+              Two tools<br/>
+            </h2>
+            <p className="t-body-lg" style={{maxWidth: 640, margin: '20px auto 0', color: 'var(--text-2)'}}>
+              Choose betweean easy clips and full control
+            </p>
+          </div>
+        </Reveal>
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 24}}>
-          <Link to="/dj" className="tool-card">
-            <span className="tag">For DJs</span>
-            <h3> For DJs cutting their own clips</h3>
-            <div className="arrow">
-              Explore DJ version
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </div>
-          </Link>
-          <Link to="/editor" className="tool-card">
-            <span className="tag">For Editors</span>
-            <h3>For editors dealing with multicam sets</h3>
-            <div className="arrow">
-              Explore Editor version
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </div>
-          </Link>
+          <Reveal delay={0}>
+            <Link to="/dj" className="tool-card">
+              <span className="tag">For DJs</span>
+              <h3> For DJs cutting their own clips</h3>
+              <div className="arrow">
+                Explore DJ version
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </div>
+            </Link>
+          </Reveal>
+          <Reveal delay={120}>
+            <Link to="/editor" className="tool-card">
+              <span className="tag">For Editors</span>
+              <h3>For editors dealing with multicam sets</h3>
+              <div className="arrow">
+                Explore Editor version
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </div>
+            </Link>
+          </Reveal>
 
         </div>
       </section>
@@ -117,9 +124,11 @@ function HomePage() {
 
       {/* CTA Section */}
       <section className="container section" style={{textAlign: 'center', padding: '80px 32px'}}>
-        <h2 className="t-display">
-          Skip the monotonous editing and get back to crative work
-        </h2>
+        <Reveal>
+          <h2 className="t-display">
+            Skip the monotonous editing and get back to crative work
+          </h2>
+        </Reveal>
 
         {/*<p className="t-body-lg" style={{maxWidth: 560, margin: '24px auto 40px'}}>*/}
         {/*  Join the beta. Limited spots available.*/}

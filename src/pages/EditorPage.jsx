@@ -5,6 +5,7 @@ import YouTubeEmbed from '../components/YouTubeEmbed';
 import qcutCreatorImage from '../assets/images/qcut_creator.png';
 import qcutStudioImage from '../assets/images/qcut_studio.png';
 import BeatGrid from "../components/BeatGrid.jsx";
+import Reveal from '../components/Reveal';
 
 const KREATOR_MONTH_PRICE_ID = 'price_1TQVNtBSfJ4A9uVJmtEhAaR3';
 const KREATOR_ONETIME_PRICE_ID = 'price_1TQVNtBSfJ4A9uVJhclSWGnr';
@@ -43,89 +44,110 @@ function EditorPage() {
 
       {/* Studio Screenshot Section */}
       <section className="container section">
-        <div style={{textAlign: 'center', marginBottom: 32}}>
-          <h2 className="t-h2">Studio</h2>
-        </div>
-        <div className="product-grid" style={{display:"grid", gridTemplateColumns:"1.4fr 1fr", gap: 32, alignItems:"center"}}>
-          <div>
-            <img src={qcutStudioImage} alt="Q·Cut DJ" style={{width: '100%'}} />
+        <Reveal>
+          <div style={{textAlign: 'center', marginBottom: 32}}>
+            <h2 className="t-h2">Studio</h2>
           </div>
-          <div>
-            <h2 className="t-h2">Timeline in Timeline out<br/>You decide</h2>
-            <p className="t-body-lg" style={{marginTop: 16}}>
-              Take full, in-depth control over your cut settings
-            </p>
-            <div style={{marginTop: 24, display:"flex", flexDirection:"column", gap: 10}}>
-              <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" strokeWidth="3">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span className="t-body">Davinci Resolve integration</span>
-              </div>
-              <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" strokeWidth="3">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span className="t-body">XML</span>
-              </div>
-              <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" strokeWidth="3">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span className="t-body">Save or share cut Presets</span>
+        </Reveal>
+        <div className="product-grid" style={{display:"grid", gridTemplateColumns:"1.4fr 1fr", gap: 32, alignItems:"center"}}>
+          <Reveal delay={0}>
+            <div>
+              <img src={qcutStudioImage} alt="Q·Cut DJ" style={{width: '100%'}} />
+            </div>
+          </Reveal>
+          <Reveal delay={150}>
+            <div>
+              <h2 className="t-h2">Timeline in Timeline out<br/>You decide</h2>
+              <p className="t-body-lg" style={{marginTop: 16}}>
+                Take full, in-depth control over your cut settings
+              </p>
+              <div style={{marginTop: 24, display:"flex", flexDirection:"column", gap: 10}}>
+                <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" strokeWidth="3">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <span className="t-body">Davinci Resolve integration</span>
+                </div>
+                <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" strokeWidth="3">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <span className="t-body">XML</span>
+                </div>
+                <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" strokeWidth="3">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <span className="t-body">Save or share cut Presets</span>
+                </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* Creator Features Grid */}
       <section className="container section">
-        <div style={{textAlign: 'center', marginBottom: 32}}>
-          <h2 className="t-h2">Professional features</h2>
-        </div>
+        <Reveal>
+          <div style={{textAlign: 'center', marginBottom: 32}}>
+            <h2 className="t-h2">Professional features</h2>
+          </div>
+        </Reveal>
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24}}>
-          <div className="card">
-            <h3 className="t-h3" style={{marginBottom: 12}}>Real automation</h3>
-            <p className="t-body">
-              Real control
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="t-h3" style={{marginBottom: 12}}>Fusion Effects</h3>
-            <p className="t-body">
-              Your effect - we'll deal with Fusion
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="t-h3" style={{marginBottom: 12}}>XML Export</h3>
-            <p className="t-body">
-              XML in & XML out
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="t-h3" style={{marginBottom: 12}}>Camera Shakes on Drops</h3>
-            <p className="t-body">
-              Shakes or zooms on drops or beats
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="t-h3" style={{marginBottom: 12}}>Preset Library</h3>
-            <p className="t-body">
-              Save your style. Re-use or share across projects.
-            </p>
-          </div>
+          <Reveal delay={0}>
+            <div className="card">
+              <h3 className="t-h3" style={{marginBottom: 12}}>Real automation</h3>
+              <p className="t-body">
+                Real control
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={80}>
+            <div className="card">
+              <h3 className="t-h3" style={{marginBottom: 12}}>Fusion Effects</h3>
+              <p className="t-body">
+                Your effect - we'll deal with Fusion
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={160}>
+            <div className="card">
+              <h3 className="t-h3" style={{marginBottom: 12}}>XML Export</h3>
+              <p className="t-body">
+                XML in & XML out
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={240}>
+            <div className="card">
+              <h3 className="t-h3" style={{marginBottom: 12}}>Camera Shakes on Drops</h3>
+              <p className="t-body">
+                Shakes or zooms on drops or beats
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={320}>
+            <div className="card">
+              <h3 className="t-h3" style={{marginBottom: 12}}>Preset Library</h3>
+              <p className="t-body">
+                Save your style. Re-use or share across projects.
+              </p>
+            </div>
+          </Reveal>
         </div>
       </section>
 
       {/* Product Screenshot Section — Creator */}
       <section className="container section">
-        <div style={{textAlign: 'center', marginBottom: 32}}>
-          <h2 className="t-h2">Creator</h2>
-        </div>
+        <Reveal>
+          <div style={{textAlign: 'center', marginBottom: 32}}>
+            <h2 className="t-h2">Creator</h2>
+          </div>
+        </Reveal>
         <div className="product-grid" style={{display:"grid", gridTemplateColumns:"1fr 1.4fr", gap: 32, alignItems:"center"}}>
-          <div>
-            <h2 className="t-h2">XML in<br/>XML out</h2>
+          <Reveal delay={0}>
+            <div>
+              <h2 className="t-h2">XML in<br/>XML out</h2>
             <p className="t-body-lg" style={{marginTop: 16}}>
               Use simplified settings to match the vibe of your set
             </p>
@@ -149,10 +171,13 @@ function EditorPage() {
                 <span className="t-body">Zoom effects </span>
               </div>
             </div>
-          </div>
-          <div>
-            <img src={qcutCreatorImage} alt="Q·Cut Studio" style={{width: '100%'}} />
-          </div>
+            </div>
+          </Reveal>
+          <Reveal delay={150}>
+            <div>
+              <img src={qcutCreatorImage} alt="Q·Cut Studio" style={{width: '100%'}} />
+            </div>
+          </Reveal>
         </div>
       </section>
 

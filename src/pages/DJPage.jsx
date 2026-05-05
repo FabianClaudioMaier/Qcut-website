@@ -4,6 +4,7 @@ import { redirectToCheckout } from '../utils/checkout';
 import YouTubeEmbed from '../components/YouTubeEmbed';
 import BeatGrid from "../components/BeatGrid";
 import qcutDjImage from '../assets/images/qcut_dj.png';
+import Reveal from '../components/Reveal';
 
 const DJ_MONTH_PRICE_ID = 'price_1TQVJyBSfJ4A9uVJTrQzprla';
 
@@ -32,7 +33,7 @@ function DJPage() {
       </section>
 
       {/* Product Screenshot Section */}
-      <section className="container section">
+      <Reveal as="section" className="container section">
         <div className="product-grid" style={{display:"grid", gridTemplateColumns:"1fr 1.4fr", gap: 32, alignItems:"center"}}>
           <div>
             <h2 className="t-h2">Two clicks<br/>One button</h2>
@@ -66,14 +67,16 @@ function DJPage() {
               </div>
             </div>
           </div>
-          <div>
-            <img src={qcutDjImage} alt="Q·Cut DJ" style={{width: '100%'}} />
-          </div>
+          <Reveal delay={150}>
+            <div>
+              <img src={qcutDjImage} alt="Q·Cut DJ" style={{width: '100%'}} />
+            </div>
+          </Reveal>
         </div>
-      </section>
+      </Reveal>
 
       {/* Stats Section */}
-      <section className="container section">
+      <Reveal as="section" className="container section">
         {/*<h2 className="t-h2" style={{marginBottom: 32, maxWidth: 720}}>*/}
         {/*  30 clips. Under a minute. Every time.*/}
         {/*</h2>*/}
@@ -94,7 +97,7 @@ function DJPage() {
             {/*<div className="lbl">Total effort</div>*/}
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/*/!* Tutorial Video Section *!/*/}
       {/*<section className="container section">*/}
@@ -116,28 +119,42 @@ function DJPage() {
 
       {/* Features Section */}
       <section className="container section">
-        <div style={{textAlign: 'center', marginBottom: 32}}>
-          <h2 className="t-h2">Built for your workflow</h2>
-        </div>
+        <Reveal>
+          <div style={{textAlign: 'center', marginBottom: 32}}>
+            <h2 className="t-h2">Built for your workflow</h2>
+          </div>
+        </Reveal>
         <div className="feature-grid-3">
-          <div className="card">
-            <h3 className="t-h3" style={{marginBottom: 12}}>Beat-synced</h3>
-          </div>
-          <div className="card">
-            <h3 className="t-h3" style={{marginBottom: 12}}>Music-adapted</h3>
-          </div>
-          <div className="card">
-            <h3 className="t-h3" style={{marginBottom: 12}}>Vertical & Horizontal</h3>
-          </div>
-          <div className="card">
-            <h3 className="t-h3" style={{marginBottom: 12}}>Mini-sets</h3>
-          </div>
-          <div className="card">
-            <h3 className="t-h3" style={{marginBottom: 12}}>Up to 3 cams</h3>
-          </div>
-          <div className="card">
-            <h3 className="t-h3" style={{marginBottom: 12}}>Local & private</h3>
-          </div>
+          <Reveal delay={0}>
+            <div className="card">
+              <h3 className="t-h3" style={{marginBottom: 12}}>Beat-synced</h3>
+            </div>
+          </Reveal>
+          <Reveal delay={80}>
+            <div className="card">
+              <h3 className="t-h3" style={{marginBottom: 12}}>Music-adapted</h3>
+            </div>
+          </Reveal>
+          <Reveal delay={160}>
+            <div className="card">
+              <h3 className="t-h3" style={{marginBottom: 12}}>Vertical & Horizontal</h3>
+            </div>
+          </Reveal>
+          <Reveal delay={0}>
+            <div className="card">
+              <h3 className="t-h3" style={{marginBottom: 12}}>Mini-sets</h3>
+            </div>
+          </Reveal>
+          <Reveal delay={80}>
+            <div className="card">
+              <h3 className="t-h3" style={{marginBottom: 12}}>Up to 3 cams</h3>
+            </div>
+          </Reveal>
+          <Reveal delay={160}>
+            <div className="card">
+              <h3 className="t-h3" style={{marginBottom: 12}}>Local & private</h3>
+            </div>
+          </Reveal>
         </div>
       </section>
 
