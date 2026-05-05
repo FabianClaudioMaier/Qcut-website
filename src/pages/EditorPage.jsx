@@ -37,14 +37,14 @@ function EditorPage() {
         {/*</div>*/}
       </section>
 
-      {/* Creator Screenshot Section */}
+      {/* Studio Screenshot Section */}
       <section className="container section">
         <div style={{textAlign: 'center', marginBottom: 48}}>
-          <h2 className="t-h2">Creator</h2>
+          <h2 className="t-h2">Studio</h2>
         </div>
         <div style={{display:"grid", gridTemplateColumns:"1.4fr 1fr", gap: 48, alignItems:"center"}}>
           <div>
-            <img src={qcutCreatorImage} alt="Q·Cut DJ" style={{width: '100%'}} />
+            <img src={qcutStudioImage} alt="Q·Cut DJ" style={{width: '100%'}} />
           </div>
           <div>
             <h2 className="t-h2">Timeline in Timeline out<br/>You decide</h2>
@@ -114,10 +114,10 @@ function EditorPage() {
         </div>
       </section>
 
-      {/* Product Screenshot Section — Studio */}
+      {/* Product Screenshot Section — Creator */}
       <section className="container section">
         <div style={{textAlign: 'center', marginBottom: 48}}>
-          <h2 className="t-h2">Studio</h2>
+          <h2 className="t-h2">Creator</h2>
         </div>
         <div style={{display:"grid", gridTemplateColumns:"1fr 1.4fr", gap: 48, alignItems:"center"}}>
           <div>
@@ -147,7 +147,7 @@ function EditorPage() {
             </div>
           </div>
           <div>
-            <img src={qcutStudioImage} alt="Q·Cut Studio" style={{width: '100%'}} />
+            <img src={qcutCreatorImage} alt="Q·Cut Studio" style={{width: '100%'}} />
           </div>
         </div>
       </section>

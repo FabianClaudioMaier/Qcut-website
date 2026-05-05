@@ -94,9 +94,9 @@ function Footer() {
         <div className="footer-links">
 
           <div className="footer-col">
-            <h4>Support</h4>
+            <h4>Legal</h4>
             <ul>
-              <li><Link to="/help">Impressum</Link></li>
+              <li><Link to="/impressum">Impressum</Link></li>
             </ul>
           </div>
           {/*<div className="footer-col">*/}
