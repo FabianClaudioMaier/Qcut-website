@@ -39,7 +39,7 @@ function HomePage() {
         </div>
         <div style={{maxWidth: 960, margin: '0 auto'}}>
           <YouTubeEmbed
-            url="https://youtu.be/Bzbe1ti2tC8"
+            url="https://www.youtube.com/watch?v=mbfVdZ-ERrg"
             showControls={true}
             autoPlay={false}
             title="Q·Cut DJ Tutorial"
