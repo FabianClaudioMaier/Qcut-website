@@ -17,9 +17,14 @@ function DJPage() {
     <div className="page-fade-enter">
       {/* Hero Section */}
       <section className="container hero-page">
-        <h1 className="t-display">
+        <h1 className="t-display" style={{
+          background: 'linear-gradient(180deg, #fff 0%, var(--text-2) 100%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text'
+        }}>
           Stop editing<br/>
-          Start dropping<br/>
+          <span style={{color: 'var(--amber)', WebkitTextFillColor: 'var(--amber)'}}>Start dropping</span><br/>
 
         </h1>
         <p className="t-body-lg" style={{maxWidth: 560, marginTop: 16}}>
@@ -69,7 +74,14 @@ function DJPage() {
           </div>
           <Reveal delay={150}>
             <div>
-              <img src={qcutDjImage} alt="Q·Cut DJ" style={{width: '100%'}} />
+              <div style={{
+                borderRadius: '12px', 
+                overflow: 'hidden', 
+                border: '1px solid var(--line)',
+                boxShadow: '0 20px 60px -20px rgba(255,178,56,0.15)'
+              }}>
+                <img src={qcutDjImage} alt="Q·Cut DJ" style={{width: '100%', display: 'block'}} />
+              </div>
             </div>
           </Reveal>
         </div>
@@ -118,7 +130,7 @@ function DJPage() {
       {/*</section>*/}
 
       {/* Features Section */}
-      <section className="container section">
+      <section className="container section dj-last-section">
         <Reveal>
           <div style={{textAlign: 'center', marginBottom: 32}}>
             <h2 className="t-h2">Built for your workflow</h2>

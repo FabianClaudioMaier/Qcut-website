@@ -93,7 +93,7 @@ function EditorPage() {
             <h2 className="t-h2">Professional features</h2>
           </div>
         </Reveal>
-        <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24}}>
+        <div className="editor-feature-grid">
           <Reveal delay={0}>
             <div className="card">
               <h3 className="t-h3" style={{marginBottom: 12}}>Real automation</h3>
@@ -138,7 +138,7 @@ function EditorPage() {
       </section>
 
       {/* Product Screenshot Section — Creator */}
-      <section className="container section">
+      <section className="container section editor-last-section">
         <Reveal>
           <div style={{textAlign: 'center', marginBottom: 32}}>
             <h2 className="t-h2">Creator</h2>

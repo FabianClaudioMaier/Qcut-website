@@ -27,7 +27,7 @@ function BetaBar() {
   return (
     <div className="beta-bar">
       <span className="pulse" />
-      <span>Beta access — Limited spots available</span>
+      <span>Free tasting week — TBA soon</span>
       <span className="pulse" />
     </div>
   );

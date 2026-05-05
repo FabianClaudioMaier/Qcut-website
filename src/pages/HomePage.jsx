@@ -43,7 +43,7 @@ function HomePage() {
       </div>
 
       {/* Tutorial Video Section */}
-      <Reveal as="section" className="container section">
+      <Reveal as="section" className="container" style={{paddingTop: 16, paddingBottom: 40}}>
         <div style={{textAlign: 'center', marginBottom: 32}}>
           <h2 className="t-h2">See how it performs</h2>
           {/*<p className="t-body-lg" style={{maxWidth: 640, margin: '20px auto 0'}}>*/}
@@ -63,7 +63,7 @@ function HomePage() {
       {/* Two Tools Section */}
       <section className="container section">
         <Reveal>
-          <div style={{textAlign: 'center', marginBottom: 32}}>
+          <div style={{textAlign: 'center', marginBottom: 24}}>
             <h2 className="t-h2">
               Two tools<br/>
             </h2>
@@ -123,7 +123,7 @@ function HomePage() {
       {/*</section>*/}
 
       {/* CTA Section */}
-      <section className="container section" style={{textAlign: 'center', padding: '80px 32px'}}>
+      <section className="container home-cta-section" style={{textAlign: 'center', padding: '64px 32px 24px'}}>
         <Reveal>
           <h2 className="t-display">
             Skip the monotonous editing and get back to crative work
