@@ -26,9 +26,9 @@ function BetaBar() {
 function Brand() {
   const navigate = useNavigate();
   return (
-    <span className="brand" onClick={() => navigate('/')}>
-      <span className="brand-mark" aria-hidden="true" />
-      <span>Q·CUT</span>
+    <span className="brand" onClick={() => navigate('/')} style={{display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer'}}>
+      <img src="/qcut_logo.png" alt="Q" style={{height: '28px', width: 'auto'}} />
+      <span style={{fontSize: '16px', fontWeight: 600, letterSpacing: '0.05em'}}>CUT</span>
     </span>
   );
 }

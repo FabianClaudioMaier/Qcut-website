@@ -157,6 +157,7 @@ button { font-family: inherit; }
   font-size: 13px;
   cursor: pointer;
 }
+/* Old brand-mark styles - replaced with logo image
 .brand-mark {
   width: 22px; height: 22px;
   position: relative;
@@ -176,6 +177,7 @@ button { font-family: inherit; }
   border-radius: 50%;
   bottom: -1px; right: -1px;
 }
+*/
 
 .nav-links {
   display: flex;
