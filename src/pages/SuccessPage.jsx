@@ -1,94 +1,73 @@
-import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import Toast from "../components/Toast";
-import { useToast } from "../hooks/useToast";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function SuccessPage() {
-  const [orderDetails, setOrderDetails] = useState(null);
-  const { isVisible, message, showToast, hideToast } = useToast();
-  
-  const handleComingSoon = (e) => {
-    e.preventDefault();
-    showToast("Coming soon — we're working on it! 🚧");
-  };
-
-  useEffect(() => {
-    // In production, this would fetch real order details from the URL params or session
-    // For now, we'll use mock data
-    const mockOrder = {
-      orderId: `QC-${Date.now()}`,
-      licenseKey: "XXXX-XXXX-XXXX-XXXX",
-      plan: "Editor Community",
-      type: "Subscription",
-      nextBilling: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toLocaleDateString(),
-      email: "user@example.com"
-    };
-    setOrderDetails(mockOrder);
-  }, []);
-
   return (
-    <main className="container">
-      <section className="section">
-        <div className="success-card">
-          <div className="text-center">
-            <div className="success-icon">✓</div>
-            <h1 className="t-h2 mb-3">Payment successful!</h1>
-            <p className="t-body mb-6">
-              Welcome to Q·Cut! Your license is active and ready to use.
-            </p>
+    <div className="page-fade-enter">
+      <section className="container" style={{minHeight: '70vh', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <div style={{textAlign: 'center', maxWidth: 640}}>
+          {/* Success Icon */}
+          <div style={{
+            width: 80, 
+            height: 80, 
+            margin: '0 auto 32px',
+            background: 'rgba(255, 178, 56, 0.1)',
+            border: '2px solid var(--amber)',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
           </div>
 
-          {orderDetails && (
-            <div className="mb-6">
-              <div className="receipt-detail">
-                <span className="receipt-label">Order ID</span>
-                <span className="receipt-value">{orderDetails.orderId}</span>
-              </div>
-              <div className="receipt-detail">
-                <span className="receipt-label">License Key</span>
-                <span className="receipt-value" style={{fontFamily: "monospace"}}>
-                  {orderDetails.licenseKey}
-                </span>
-              </div>
-              <div className="receipt-detail">
-                <span className="receipt-label">Plan</span>
-                <span className="receipt-value">{orderDetails.plan}</span>
-              </div>
-              <div className="receipt-detail">
-                <span className="receipt-label">Type</span>
-                <span className="receipt-value">{orderDetails.type}</span>
-              </div>
-              {orderDetails.type === "Subscription" && (
-                <div className="receipt-detail">
-                  <span className="receipt-label">Next billing</span>
-                  <span className="receipt-value">{orderDetails.nextBilling}</span>
-                </div>
-              )}
-            </div>
-          )}
+          <h1 className="t-display" style={{marginBottom: 24}}>
+            Welcome to Q·Cut!
+          </h1>
+          
+          <p className="t-body-lg" style={{marginBottom: 16}}>
+            Your subscription is now active. Check your email for download links and license key.
+          </p>
+          
+          <p className="t-body" style={{marginBottom: 40, color: 'var(--text-3)'}}>
+            Having trouble? Contact us at{' '}
+            <a href="mailto:support@qcut.app" style={{color: 'var(--amber)'}}>
+              support@qcut.app
+            </a>
+          </p>
 
-          <div className="text-center">
-            <p className="t-body mb-6">
-              We've sent a confirmation email with your license key and download links 
-              to <strong>{orderDetails?.email}</strong>. Please check your inbox.
-            </p>
-            
-            <div className="flex flex-col gap-3">
-              <button 
-                onClick={handleComingSoon} 
-                className="btn btn-amber w-full"
-              >
-                Download Q·Cut
-              </button>
-              <Link to="/" className="btn btn-ghost w-full">
-                Back to home
-              </Link>
+          <div style={{display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap'}}>
+            <Link to="/help" className="btn btn-amber">
+              Get started
+            </Link>
+            <Link to="/" className="btn btn-ghost">
+              Back to home
+            </Link>
+          </div>
+
+          {/* Additional Info */}
+          <div style={{marginTop: 80, padding: 32, background: 'var(--surface)', border: '1px solid var(--line)', borderRadius: 'var(--r)', textAlign: 'left'}}>
+            <h3 className="t-h3" style={{marginBottom: 20}}>What happens next?</h3>
+            <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
+              <div style={{display: 'flex', gap: 12}}>
+                <span style={{color: 'var(--amber)', fontWeight: 600}}>1.</span>
+                <span className="t-body">Check your email for download links and installation instructions</span>
+              </div>
+              <div style={{display: 'flex', gap: 12}}>
+                <span style={{color: 'var(--amber)', fontWeight: 600}}>2.</span>
+                <span className="t-body">Install Q·Cut and activate with your license key</span>
+              </div>
+              <div style={{display: 'flex', gap: 12}}>
+                <span style={{color: 'var(--amber)', fontWeight: 600}}>3.</span>
+                <span className="t-body">Start cutting your footage to the beat!</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <Toast message={message} isVisible={isVisible} onClose={hideToast} />
-    </main>
+    </div>
   );
 }
 

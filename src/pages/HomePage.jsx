@@ -1,129 +1,133 @@
-import { Link } from "react-router-dom";
-import BeatGrid from "../components/BeatGrid";
-import YouTubeEmbed from "../components/YouTubeEmbed";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import YouTubeEmbed from '../components/YouTubeEmbed';
 
 function HomePage() {
   return (
-    <main>
+    <div className="page-fade-enter">
       {/* Hero Section */}
-      <section className="section">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="t-display mb-4">
-                Cut to the beat.<br/>Not the clock.
-              </h1>
-              <p className="t-body mb-8" style={{fontSize: "18px"}}>
-                Multicam editing that syncs to your music. Q·Cut automatically switches 
-                angles on beat, creating dynamic videos that match your rhythm.
-              </p>
-              <Link to="/pricing" className="btn btn-amber btn-amber-lg">
-                Start editing smarter →
-              </Link>
-            </div>
-            <div>
-              <BeatGrid />
-            </div>
-          </div>
+      <section className="hero-home">
+        <h1 className="t-display-xl">
+          Stop editing<br/>
+          <span style={{color:"var(--amber)"}}>Start qcutting</span>
+        </h1>
+        <p className="t-body-lg" style={{maxWidth: 580, margin:"24px auto 0"}}>
+          Drop your set. Personilize. Press go. Done. All your footage become ready-to-post clips.
+        </p>
+        {/*
+        <div style={{display:"flex", gap: 12, justifyContent:"center", marginTop: 32, flexWrap:"wrap"}}>
+
+          <Link to="/dj" className="btn btn-amber btn-amber-lg">
+            See how it works
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </Link>
+
         </div>
+        */}
+
       </section>
 
-      {/* How it Works Section */}
-      <section className="section">
-        <div className="container">
-          <h2 className="t-h2 text-center mb-8">As simple as 1-2-3</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="card card-feature text-center">
-              <div className="text-4xl mb-4" style={{color: "var(--amber)"}}>01</div>
-              <h3 className="t-h3 mb-3">Import your footage</h3>
-              <p className="t-body">
-                Drop in clips from multiple cameras. Q·Cut handles any format, any frame rate.
-              </p>
-            </div>
-            
-            <div className="card card-feature text-center">
-              <div className="text-4xl mb-4" style={{color: "var(--amber)"}}>02</div>
-              <h3 className="t-h3 mb-3">Detect the beat</h3>
-              <p className="t-body">
-                Our AI analyzes your audio and maps every beat, drop, and transition.
-              </p>
-            </div>
-            
-            <div className="card card-feature text-center">
-              <div className="text-4xl mb-4" style={{color: "var(--amber)"}}>03</div>
-              <h3 className="t-h3 mb-3">Export & share</h3>
-              <p className="t-body">
-                Get perfectly synced multicam edits. Export to any format in seconds.
-              </p>
-            </div>
-          </div>
+      {/* Tutorial Video Section */}
+      <section className="container section">
+        <div style={{textAlign: 'center', marginBottom: 48}}>
+          <h2 className="t-h2">See how it performs</h2>
+          {/*<p className="t-body-lg" style={{maxWidth: 640, margin: '20px auto 0'}}>*/}
+          {/*  Watch how Q·Cut DJ transforms hours of footage into perfect clips*/}
+          {/*</p>*/}
+        </div>
+        <div style={{maxWidth: 960, margin: '0 auto'}}>
           <YouTubeEmbed
-              url="https://www.youtube.com/watch?v=mbfVdZ-ERrg"
-              showControls={true}
-              autoPlay={false}
-              title="Tutorial Video"
+            url="https://youtu.be/Bzbe1ti2tC8"
+            showControls={true}
+            autoPlay={false}
+            title="Q·Cut DJ Tutorial"
           />
         </div>
       </section>
 
-      {/* Pricing Teaser Section */}
-      <section className="section-tight">
-        <div className="container">
-          <div className="card max-w-3xl mx-auto text-center">
-            <h2 className="t-h2 mb-4">Choose your workflow</h2>
-            <p className="t-body mb-6">
-              From live DJ sets to professional productions, we have a plan that fits.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-              <div>
-                <div className="t-h3 mb-2">DJ</div>
-                <div className="t-label">€20/month</div>
-              </div>
-              <div>
-                <div className="t-h3 mb-2">Editor Community</div>
-                <div className="t-label">€30/month</div>
-              </div>
-              <div>
-                <div className="t-h3 mb-2">Editor Pro</div>
-                <div className="t-label">€50/month</div>
-              </div>
-            </div>
-            <Link to="/pricing" className="btn btn-amber">
-              See all features →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust Section */}
-      <section className="section">
-        <div className="container">
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            <span className="t-label">Trusted by 5,000+ creators</span>
-            <span className="t-label">•</span>
-            <span className="t-label">150+ cuts per minute</span>
-            <span className="t-label">•</span>
-            <span className="t-label">0.1ms beat precision</span>
-            <span className="t-label">•</span>
-            <span className="t-label">Works with any DAW</span>
-          </div>
-        </div>
-      </section>
-
-      {/* Help Section */}
-      <section className="section-tight">
-        <div className="container text-center">
-          <h2 className="t-h2 mb-4">Need help?</h2>
-          <p className="t-body mb-6">
-            Check our documentation, FAQs, or reach out to our support team.
+      {/* Two Tools Section */}
+      <section className="container section">
+        <div style={{textAlign: 'center', marginBottom: 64}}>
+          <h2 className="t-h2">
+            Two tools<br/>
+          </h2>
+          <p className="t-body-lg" style={{maxWidth: 640, margin: '20px auto 0', color: 'var(--text-2)'}}>
+            Choose betweean easy clips and full control
           </p>
-          <Link to="/help" className="btn btn-ghost">
-            Visit Help Center
+        </div>
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 24}}>
+          <Link to="/editor" className="tool-card">
+            <span className="tag">For Editors</span>
+            <h3>Multicam automation</h3>
+            <p className="t-body" style={{marginTop: 8}}>
+              For editors dealing with multicam sets
+            </p>
+            <div className="arrow">
+              Explore Editor version
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </Link>
+          <Link to="/dj" className="tool-card">
+            <span className="tag">For DJs</span>
+            <h3>Beat-synced cuts</h3>
+            <p className="t-body" style={{marginTop: 8}}>
+              For DJs cutting their own clips
+            </p>
+            <div className="arrow">
+              Explore DJ version
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
           </Link>
         </div>
       </section>
-    </main>
+
+      {/*/!* Stats Section *!/*/}
+      {/*<section className="container section">*/}
+      {/*  <div className="scoreboard-row">*/}
+      {/*    <div className="scoreboard">*/}
+      {/*      <div className="corner" />*/}
+      {/*      <div className="num">60<span className="unit">sec</span></div>*/}
+      {/*      <div className="lbl">Average export time</div>*/}
+      {/*    </div>*/}
+      {/*    <div className="scoreboard">*/}
+      {/*      <div className="corner" />*/}
+      {/*      <div className="num">30<span className="unit">clips</span></div>*/}
+      {/*      <div className="lbl">Per session</div>*/}
+      {/*    </div>*/}
+      {/*    <div className="scoreboard">*/}
+      {/*      <div className="corner" />*/}
+      {/*      <div className="num">0<span className="unit">%</span></div>*/}
+      {/*      <div className="lbl">Manual editing</div>*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*</section>*/}
+
+      {/* CTA Section */}
+      <section className="container section" style={{textAlign: 'center', padding: '120px 32px'}}>
+        <h2 className="t-display">
+          Skip the monotonous editing and get back to crative work
+        </h2>
+
+        {/*<p className="t-body-lg" style={{maxWidth: 560, margin: '24px auto 40px'}}>*/}
+        {/*  Join the beta. Limited spots available.*/}
+        {/*</p>*/}
+        {/*<div style={{display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap'}}>*/}
+        {/*  <Link to="/pricing" className="btn btn-amber btn-amber-lg">*/}
+        {/*    Get early access*/}
+        {/*  </Link>*/}
+        {/*  <Link to="/help" className="btn btn-ghost">*/}
+        {/*    Learn more*/}
+        {/*  </Link>*/}
+        {/*</div>*/}
+
+      </section>
+    </div>
   );
 }
 
