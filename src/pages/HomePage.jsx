@@ -9,7 +9,7 @@ function HomePage() {
       <section className="hero-home">
         <h1 className="t-display-xl">
           Stop editing<br/>
-          <span style={{color:"var(--amber)"}}>Start qcutting</span>
+          <span style={{color:"var(--amber)"}}>Start Q-cutting</span>
         </h1>
         <p className="t-body-lg" style={{maxWidth: 580, margin:"24px auto 0"}}>
           Drop your set. Personilize. Press go. Done. All your footage become ready-to-post clips.
@@ -58,25 +58,9 @@ function HomePage() {
           </p>
         </div>
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 24}}>
-          <Link to="/editor" className="tool-card">
-            <span className="tag">For Editors</span>
-            <h3>Multicam automation</h3>
-            <p className="t-body" style={{marginTop: 8}}>
-              For editors dealing with multicam sets
-            </p>
-            <div className="arrow">
-              Explore Editor version
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </div>
-          </Link>
           <Link to="/dj" className="tool-card">
             <span className="tag">For DJs</span>
-            <h3>Beat-synced cuts</h3>
-            <p className="t-body" style={{marginTop: 8}}>
-              For DJs cutting their own clips
-            </p>
+            <h3> For DJs cutting their own clips</h3>
             <div className="arrow">
               Explore DJ version
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -84,6 +68,17 @@ function HomePage() {
               </svg>
             </div>
           </Link>
+          <Link to="/editor" className="tool-card">
+            <span className="tag">For Editors</span>
+            <h3>For editors dealing with multicam sets</h3>
+            <div className="arrow">
+              Explore Editor version
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </Link>
+
         </div>
       </section>
 

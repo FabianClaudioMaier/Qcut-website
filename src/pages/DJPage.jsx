@@ -24,9 +24,6 @@ function DJPage() {
         <p className="t-body-lg" style={{maxWidth: 560, marginTop: 16}}>
           Drag in your video. Drag in your audio. Hit export. That's literally it.
         </p>
-        <div>
-          <BeatGrid />
-        </div>
         {/*<div style={{marginTop: 24, display:"flex", gap: 12, flexWrap:"wrap"}}>*/}
         {/*  <button className="btn btn-amber btn-amber-lg" onClick={handleSubscribe}>*/}
         {/*    Get Q·Cut DJ — €20/mo*/}
@@ -36,7 +33,7 @@ function DJPage() {
 
       {/* Product Screenshot Section */}
       <section className="container section">
-        <div style={{display:"grid", gridTemplateColumns:"1fr 1.4fr", gap: 48, alignItems:"center"}}>
+        <div className="product-grid" style={{display:"grid", gridTemplateColumns:"1fr 1.4fr", gap: 48, alignItems:"center"}}>
           <div>
             <h2 className="t-h2">Two clicks<br/>One button</h2>
             <p className="t-body-lg" style={{marginTop: 16, maxWidth: 440}}>

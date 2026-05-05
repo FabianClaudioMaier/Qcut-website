@@ -4,6 +4,7 @@ import { redirectToCheckout } from '../utils/checkout';
 import YouTubeEmbed from '../components/YouTubeEmbed';
 import qcutCreatorImage from '../assets/images/qcut_creator.png';
 import qcutStudioImage from '../assets/images/qcut_studio.png';
+import BeatGrid from "../components/BeatGrid.jsx";
 
 const KREATOR_MONTH_PRICE_ID = 'price_1TQVNtBSfJ4A9uVJmtEhAaR3';
 const KREATOR_ONETIME_PRICE_ID = 'price_1TQVNtBSfJ4A9uVJhclSWGnr';
@@ -30,6 +31,9 @@ function EditorPage() {
         <p className="t-body-lg" style={{maxWidth: 560, marginTop: 16}}>
           Timeline in. Timeline out. Full control. No AI guessing — you set the rules.
         </p>
+        <div>
+          <BeatGrid />
+        </div>
         {/*<div style={{marginTop: 24, display:"flex", gap: 12, flexWrap:"wrap"}}>*/}
         {/*  <Link to="/pricing" className="btn btn-amber btn-amber-lg">*/}
         {/*    Choose your plan*/}
@@ -42,7 +46,7 @@ function EditorPage() {
         <div style={{textAlign: 'center', marginBottom: 48}}>
           <h2 className="t-h2">Studio</h2>
         </div>
-        <div style={{display:"grid", gridTemplateColumns:"1.4fr 1fr", gap: 48, alignItems:"center"}}>
+        <div className="product-grid" style={{display:"grid", gridTemplateColumns:"1.4fr 1fr", gap: 48, alignItems:"center"}}>
           <div>
             <img src={qcutStudioImage} alt="Q·Cut DJ" style={{width: '100%'}} />
           </div>
