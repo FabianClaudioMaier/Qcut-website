@@ -33,7 +33,7 @@ function DJPage() {
 
       {/* Product Screenshot Section */}
       <section className="container section">
-        <div className="product-grid" style={{display:"grid", gridTemplateColumns:"1fr 1.4fr", gap: 48, alignItems:"center"}}>
+        <div className="product-grid" style={{display:"grid", gridTemplateColumns:"1fr 1.4fr", gap: 32, alignItems:"center"}}>
           <div>
             <h2 className="t-h2">Two clicks<br/>One button</h2>
             <p className="t-body-lg" style={{marginTop: 16, maxWidth: 440}}>
@@ -116,7 +116,7 @@ function DJPage() {
 
       {/* Features Section */}
       <section className="container section">
-        <div style={{textAlign: 'center', marginBottom: 48}}>
+        <div style={{textAlign: 'center', marginBottom: 32}}>
           <h2 className="t-h2">Built for your workflow</h2>
         </div>
         <div className="feature-grid-3">

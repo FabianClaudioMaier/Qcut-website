@@ -43,10 +43,10 @@ function EditorPage() {
 
       {/* Studio Screenshot Section */}
       <section className="container section">
-        <div style={{textAlign: 'center', marginBottom: 48}}>
+        <div style={{textAlign: 'center', marginBottom: 32}}>
           <h2 className="t-h2">Studio</h2>
         </div>
-        <div className="product-grid" style={{display:"grid", gridTemplateColumns:"1.4fr 1fr", gap: 48, alignItems:"center"}}>
+        <div className="product-grid" style={{display:"grid", gridTemplateColumns:"1.4fr 1fr", gap: 32, alignItems:"center"}}>
           <div>
             <img src={qcutStudioImage} alt="Q·Cut DJ" style={{width: '100%'}} />
           </div>
@@ -81,7 +81,7 @@ function EditorPage() {
 
       {/* Creator Features Grid */}
       <section className="container section">
-        <div style={{textAlign: 'center', marginBottom: 48}}>
+        <div style={{textAlign: 'center', marginBottom: 32}}>
           <h2 className="t-h2">Professional features</h2>
         </div>
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24}}>
@@ -120,10 +120,10 @@ function EditorPage() {
 
       {/* Product Screenshot Section — Creator */}
       <section className="container section">
-        <div style={{textAlign: 'center', marginBottom: 48}}>
+        <div style={{textAlign: 'center', marginBottom: 32}}>
           <h2 className="t-h2">Creator</h2>
         </div>
-        <div style={{display:"grid", gridTemplateColumns:"1fr 1.4fr", gap: 48, alignItems:"center"}}>
+        <div className="product-grid" style={{display:"grid", gridTemplateColumns:"1fr 1.4fr", gap: 32, alignItems:"center"}}>
           <div>
             <h2 className="t-h2">XML in<br/>XML out</h2>
             <p className="t-body-lg" style={{marginTop: 16}}>

@@ -314,33 +314,33 @@ button { font-family: inherit; }
 }
 
 /* ---------- Sections ---------- */
-.section { padding: 80px 0; }
-.section-tight { padding: 48px 0; }
+.section { padding: 56px 0; }
+.section-tight { padding: 32px 0; }
 
 /* ---------- HERO ---------- */
 .hero-page {
-  padding: 64px 0 40px;
+  padding: 48px 0 24px;
 }
 
 .hero-home {
   position: relative;
-  min-height: 78vh;
+  min-height: 68vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   text-align: center;
-  padding: 64px 32px 48px;
+  padding: 48px 32px 32px;
 }
 .hero-home::before {
   content: "";
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(60% 50% at 50% 30%, rgba(255,178,56,0.12), transparent 70%),
-    radial-gradient(80% 60% at 50% 100%, rgba(255,140,0,0.08), transparent 70%),
-    var(--bg);
+    radial-gradient(60% 50% at 50% 30%, rgba(255,178,56,0.14), transparent 65%),
+    radial-gradient(80% 60% at 50% 90%, rgba(255,140,0,0.06), transparent 75%),
+    linear-gradient(180deg, var(--bg) 0%, #0a0a0a 70%, #0c0c0c 100%);
   z-index: 0;
 }
 .hero-home::after {
@@ -876,5 +876,31 @@ button { font-family: inherit; }
   .btn-amber-lg, .btn-lg {
     font-size: 15px;
     padding: 12px 20px;
+  }
+}
+
+@media (max-width: 390px) {
+  .container, .container-narrow { padding: 0 16px; }
+  .hero-home { padding: 20px 16px; }
+  .section { padding: 32px 0; }
+  
+  .nav-inner { 
+    padding: 10px 16px;
+    height: 56px;
+  }
+  
+  .footer-inner {
+    padding: 24px 16px;
+  }
+  
+  .t-display-xl { font-size: clamp(32px, 9vw, 48px); }
+  .t-display { font-size: clamp(28px, 8vw, 42px); }
+  
+  .feature-grid-3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .product-grid {
+    gap: 24px !important;
   }
 }

@@ -6,7 +6,8 @@ function HomePage() {
   return (
     <div className="page-fade-enter">
       {/* Hero Section */}
-      <section className="hero-home">
+      <div style={{position: 'relative'}}>
+        <section className="hero-home">
         <h1 className="t-display-xl">
           Stop editing<br/>
           <span style={{color:"var(--amber)"}}>Start Q-cutting</span>
@@ -27,11 +28,22 @@ function HomePage() {
         </div>
         */}
 
-      </section>
+        </section>
+        <div style={{
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: '120px',
+          background: 'linear-gradient(180deg, transparent 0%, var(--bg) 100%)',
+          pointerEvents: 'none',
+          zIndex: 2
+        }} />
+      </div>
 
       {/* Tutorial Video Section */}
       <section className="container section">
-        <div style={{textAlign: 'center', marginBottom: 48}}>
+        <div style={{textAlign: 'center', marginBottom: 32}}>
           <h2 className="t-h2">See how it performs</h2>
           {/*<p className="t-body-lg" style={{maxWidth: 640, margin: '20px auto 0'}}>*/}
           {/*  Watch how Q·Cut DJ transforms hours of footage into perfect clips*/}
@@ -49,7 +61,7 @@ function HomePage() {
 
       {/* Two Tools Section */}
       <section className="container section">
-        <div style={{textAlign: 'center', marginBottom: 64}}>
+        <div style={{textAlign: 'center', marginBottom: 32}}>
           <h2 className="t-h2">
             Two tools<br/>
           </h2>
@@ -104,7 +116,7 @@ function HomePage() {
       {/*</section>*/}
 
       {/* CTA Section */}
-      <section className="container section" style={{textAlign: 'center', padding: '120px 32px'}}>
+      <section className="container section" style={{textAlign: 'center', padding: '80px 32px'}}>
         <h2 className="t-display">
           Skip the monotonous editing and get back to crative work
         </h2>

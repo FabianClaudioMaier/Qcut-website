@@ -11,6 +11,17 @@ import PrivacyNoticePage from './pages/PrivacyNoticePage';
 import TestPage from './pages/TestPage';
 import SimpleVideoTest from './pages/SimpleVideoTest';
 
+// ScrollToTop Component
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 // Beta Bar Component
 function BetaBar() {
   return (
@@ -131,6 +142,7 @@ function Footer() {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <BetaBar />
       <Nav />
       <Routes>
