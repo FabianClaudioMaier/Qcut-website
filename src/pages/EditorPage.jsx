@@ -151,44 +151,6 @@ function EditorPage() {
           </div>
         </div>
       </section>
-      {/* Studio Features Grid */}
-      <section className="container section">
-        <div style={{textAlign: 'center', marginBottom: 48}}>
-          <h2 className="t-h2">Professional features</h2>
-        </div>
-        <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24}}>
-          <div className="card">
-            <h3 className="t-h3" style={{marginBottom: 12}}>Real automation</h3>
-            <p className="t-body">
-              Real control
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="t-h3" style={{marginBottom: 12}}>Fusion Effects</h3>
-            <p className="t-body">
-              Your effect - we'll deal with Fusion
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="t-h3" style={{marginBottom: 12}}>XML Export</h3>
-            <p className="t-body">
-              XML in & XML out
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="t-h3" style={{marginBottom: 12}}>Camera Shakes on Drops</h3>
-            <p className="t-body">
-              Shakes or zooms on drops or beats
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="t-h3" style={{marginBottom: 12}}>Preset Library</h3>
-            <p className="t-body">
-              Save your style. Re-use or share across projects.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/*/!* Plans Section *!/*/}
       {/*<section className="container section">*/}
@@ -292,22 +254,22 @@ function EditorPage() {
 
 
       {/* CTA Section */}
-      <section className="container section" style={{textAlign: 'center', padding: '80px 32px'}}>
-        <h2 className="t-display">
-          Ready to automate?
-        </h2>
-        <p className="t-body-lg" style={{maxWidth: 560, margin: '24px auto 40px'}}>
-          Start with Kreator. Upgrade anytime.
-        </p>
-        <div style={{display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap'}}>
-          <Link to="/pricing" className="btn btn-amber btn-amber-lg">
-            See all plans
-          </Link>
-          <Link to="/help" className="btn btn-ghost">
-            Learn more
-          </Link>
-        </div>
-      </section>
+      {/*<section className="container section" style={{textAlign: 'center', padding: '80px 32px'}}>*/}
+      {/*  <h2 className="t-display">*/}
+      {/*    Ready to automate?*/}
+      {/*  </h2>*/}
+      {/*  <p className="t-body-lg" style={{maxWidth: 560, margin: '24px auto 40px'}}>*/}
+      {/*    Start with Kreator. Upgrade anytime.*/}
+      {/*  </p>*/}
+      {/*  <div style={{display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap'}}>*/}
+      {/*    <Link to="/pricing" className="btn btn-amber btn-amber-lg">*/}
+      {/*      See all plans*/}
+      {/*    </Link>*/}
+      {/*    <Link to="/help" className="btn btn-ghost">*/}
+      {/*      Learn more*/}
+      {/*    </Link>*/}
+      {/*  </div>*/}
+      {/*</section>*/}
     </div>
   );
 }
