@@ -103,7 +103,7 @@ function EditorPage() {
           <Reveal delay={80}>
             <div className="card">
               <h3>Fusion Effects</h3>
-              <p>Your effect - we'll deal with Fusion</p>
+              <p>Choose your effect - we'll deal with Fusion</p>
             </div>
           </Reveal>
           <Reveal delay={160}>
