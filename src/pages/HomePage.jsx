@@ -59,7 +59,7 @@ function HomePage() {
             </div>
           </div>
           <YouTubeEmbed
-              url="https://youtu.be/Bzbe1ti2tC8?si=YIaqQ5V420zYtW6B"
+              url="https://www.youtube.com/watch?v=mbfVdZ-ERrg"
               showControls={true}
               autoPlay={false}
               title="Tutorial Video"
