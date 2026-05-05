@@ -111,7 +111,7 @@ function HomePage() {
       {/* CTA Section */}
       <section className="container section" style={{textAlign: 'center', padding: '120px 32px'}}>
         <h2 className="t-display">
-          We cut the edit - You cut the rest
+          Skip the monotonous editing and get back to crative work
         </h2>
 
         {/*<p className="t-body-lg" style={{maxWidth: 560, margin: '24px auto 40px'}}>*/}

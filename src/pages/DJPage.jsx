@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { redirectToCheckout } from '../utils/checkout';
 import YouTubeEmbed from '../components/YouTubeEmbed';
 import BeatGrid from "../components/BeatGrid";
+import qcutDjImage from '../assets/images/qcut_dj.png';
 
 const DJ_MONTH_PRICE_ID = 'price_1TQVJyBSfJ4A9uVJTrQzprla';
 
@@ -68,12 +69,8 @@ function DJPage() {
               </div>
             </div>
           </div>
-          <div style={{borderRadius: '12px', overflow: 'hidden', background: 'var(--surface)', border: '1px solid var(--line)'}}>
-            <img 
-              src="/dj-app-screenshot.png" 
-              alt="Q·Cut DJ Interface" 
-              style={{width: '100%', display: 'block'}}
-            />
+          <div>
+            <img src={qcutDjImage} alt="Q·Cut DJ" style={{width: '100%'}} />
           </div>
         </div>
       </section>
@@ -136,7 +133,7 @@ function DJPage() {
             <h3 className="t-h3" style={{marginBottom: 12}}>Vertical & Horizontal</h3>
           </div>
           <div className="card">
-            <h3 className="t-h3" style={{marginBottom: 12}}>Mini-sets ready</h3>
+            <h3 className="t-h3" style={{marginBottom: 12}}>Mini-sets</h3>
           </div>
           <div className="card">
             <h3 className="t-h3" style={{marginBottom: 12}}>Up to 3 cams</h3>
