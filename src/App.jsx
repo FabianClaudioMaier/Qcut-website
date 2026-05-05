@@ -123,9 +123,6 @@ function Footer() {
           {/*</div>*/}
         </div>
       </div>
-      <div className="footer-bottom">
-        <p className="footer-copy">© 2025 Q·Cut. All rights reserved.</p>
-      </div>
     </footer>
   );
 }
