@@ -96,42 +96,32 @@ function EditorPage() {
         <div className="editor-feature-grid">
           <Reveal delay={0}>
             <div className="card">
-              <h3 className="t-h3" style={{marginBottom: 12}}>Real automation</h3>
-              <p className="t-body">
-                Real control
-              </p>
+              <h3>Real automation</h3>
+              <p>Real control</p>
             </div>
           </Reveal>
           <Reveal delay={80}>
             <div className="card">
-              <h3 className="t-h3" style={{marginBottom: 12}}>Fusion Effects</h3>
-              <p className="t-body">
-                Your effect - we'll deal with Fusion
-              </p>
+              <h3>Fusion Effects</h3>
+              <p>Your effect - we'll deal with Fusion</p>
             </div>
           </Reveal>
           <Reveal delay={160}>
             <div className="card">
-              <h3 className="t-h3" style={{marginBottom: 12}}>XML Export</h3>
-              <p className="t-body">
-                XML in & XML out
-              </p>
+              <h3>XML Export</h3>
+              <p>XML in & XML out</p>
             </div>
           </Reveal>
-          <Reveal delay={240}>
+          <Reveal delay={0}>
             <div className="card">
-              <h3 className="t-h3" style={{marginBottom: 12}}>Camera Shakes on Drops</h3>
-              <p className="t-body">
-                Shakes or zooms on drops or beats
-              </p>
+              <h3>Camera Shakes on Drops</h3>
+              <p>Shakes or zooms on drops or beats</p>
             </div>
           </Reveal>
-          <Reveal delay={320}>
+          <Reveal delay={80}>
             <div className="card">
-              <h3 className="t-h3" style={{marginBottom: 12}}>Preset Library</h3>
-              <p className="t-body">
-                Save your style. Re-use or share across projects.
-              </p>
+              <h3>Preset Library</h3>
+              <p>Save your style. Re-use or share across projects.</p>
             </div>
           </Reveal>
         </div>
