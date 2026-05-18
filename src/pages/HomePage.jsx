@@ -125,8 +125,8 @@ function HomePage() {
       {/* CTA Section */}
       <section className="container home-cta-section" style={{textAlign: 'center', padding: '64px 32px 24px'}}>
         <Reveal>
-          <h2 className="t-display">
-            Skip the monotonous editing and get back to crative work
+          <h2 className="t-display" style={{color:"var(--amber)"}}>
+            Skip the monotonous editing and get back to creative work
           </h2>
         </Reveal>
 
